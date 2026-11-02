@@ -1,6 +1,6 @@
-﻿import React from 'react';
+import React from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUp, Cloud, Heart, Mail, ShieldCheck } from 'lucide-react';
+import { ArrowUp, Heart, Mail, ShieldCheck } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './SocialIcons';
 
 export default function Footer({ onOpenResume }) {
@@ -52,19 +52,12 @@ export default function Footer({ onOpenResume }) {
           </button>
         </div>
 
-        {/* Bottom Credits & Cloudflare Badge */}
+        {/* Bottom Credits */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
           <div>
             © {new Date().getFullYear()} Nishant Neupane. All rights reserved.
           </div>
-
-          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/60 border border-slate-800 text-[11px] text-slate-400">
-            <Cloud className="w-3.5 h-3.5 text-orange-400" />
-            <span>Cloudflare Pages Deployable</span>
-            <span className="text-slate-600">•</span>
-            <span className="text-cyan-400">Edge Optimized</span>
-          </div>
-
+          
           <div className="flex items-center gap-3">
             <a
               href={personalInfo.linkedin}
