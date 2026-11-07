@@ -9,7 +9,6 @@
   openTo: "Open to Relocation",
   workAuth: "Canadian Work Permit (Authorized to work in Canada)",
   email: "nishant.neupane@myjobfolio.com",
-  phone: "+1 (647) 207-9963",
   linkedin: "https://www.linkedin.com/in/nishant-neupane-549650258/",
   github: "https://github.com/npn-nishant",
   profileImage: "/nishant-portrait.jpg",

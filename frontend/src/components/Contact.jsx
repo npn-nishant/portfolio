@@ -3,7 +3,6 @@ import { personalInfo } from '../data/portfolioData';
 import { 
   Mail, 
   MapPin, 
-  Phone, 
   Send, 
   Check, 
   Copy, 
@@ -17,7 +16,6 @@ import { LinkedinIcon, GithubIcon } from './SocialIcons';
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,12 +30,6 @@ export default function Contact() {
     navigator.clipboard.writeText(personalInfo.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText(personalInfo.phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   const handleSubmit = async (e) => {
@@ -187,28 +179,7 @@ export default function Contact() {
               <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-purple-400 transition-colors" />
             </a>
 
-            {/* Phone Card */}
-            <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-emerald-500/40 transition-all flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-slate-400 font-mono block">Phone</span>
-                  <span className="text-sm font-semibold text-white font-mono">
-                    {personalInfo.phone}
-                  </span>
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={handleCopyPhone}
-                className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer"
-                title="Copy phone"
-              >
-                {copiedPhone ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-              </button>
-            </div>
+            
 
             {/* Location & Status Pill */}
             <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 text-xs font-mono text-slate-400 flex items-center gap-2">
