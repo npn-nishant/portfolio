@@ -116,9 +116,7 @@ export default function ResumeModal({ onClose }) {
               </a>
             </div>
 
-            <p className="text-[10px] text-slate-500 text-center font-mono">
-              Direct vector PDF • Open in any tab without iframe or browser connection errors
-            </p>
+
           </div>
 
         </div>
